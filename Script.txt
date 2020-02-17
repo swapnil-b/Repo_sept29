@@ -1,0 +1,19 @@
+
+
+1)create file local /opt/test_boot : 
+script
+#!/bin/bash
+grub2-reboot "MPC CentOS Linux release 7.6.1810 (Core)  (on /dev/sda2)"
+/sbin/reboot
+
+2)Set permission
+
+chown root:root /opt/test_boot
+chmod 755 /opt/test
+
+3)sudo echo '%users ALL=(ALL) NOPASSWD: /opt/test' > /etc/sudoers.d/MPC-reboot
+
+4) Create a file in /usr/sbin
+
+vim MPC -> #!/bin/bash
+                     sudo /opt/test
