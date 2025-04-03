@@ -16,4 +16,4 @@ chmod 755 /opt/test
 4) Create a file in /usr/sbin
 
 vim MPC -> #!/bin/bash
-                     sudo /opt/test
+            sudo /opt/test
